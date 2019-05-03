@@ -20,8 +20,8 @@ public class Eratosthenes {
 		
 		for(int i=2; i<=n; i++) {
 			
-			if(check[i] == false) {
-				pn++;
+			if(check[i] == false) {// 소수
+				prime[pn++] = i;
 				
 				for(int j = i*i; j<=n; j+=i)
 					check[j] = true;
